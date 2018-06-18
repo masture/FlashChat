@@ -1,24 +1,26 @@
 # Flash-Chat
-Learn to make iOS Apps with [The App Brewery](https://www.appbrewery.co) 📱 | Project Stub | (Swift 4.0/Xcode 9) - Flash Chat App
 
-Beginner: Download the starter project files as .zip and extract the files to your desktop.
+This App uses Firebase realtime database to store the chat messages.
+It has simple user registration and login screens.
+Once the user logs in, the message can be sent to all the users. 
+The communication happens realtime.
+The App was tested by launching one instance from Simulator and other from iPhone SE device.
 
-Pro: Git clone to your Xcode projects folder.
-
-## Podfile Configuration
-```
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['CLANG_WARN_DOCUMENTATION_COMMENTS'] = 'NO'
-        end
-    end
-end
-```
-
-## Finished App
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/Flash%20Chat.gif)
+The advantage of using Firebase, a new client on Android can also be developed and the cross platform chat can be achieved.
+(At present I restricted my self for iOS part only. You are welcome to add Android client.)
 
 
+The integration with Firebase is achieved by using following pods:
+* Firebase
+* Firebase/Auth
+* Firebase/Database
 
-Copyright © The App Brewery
+From the design point of view it has some nice features like:
+1. It has textfield and the send button animated as the keyboard is shown and hid.
+2. The UITableVieewCell are of dynamic heights and with different colours for own message and message received from friends.
+
+Future Enhancements:
+* There is no one to one messaging login implemented.
+* Develop Android client App and achieve cross platform communication
+
+
